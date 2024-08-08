@@ -1,0 +1,75 @@
+.logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 1vw;
+  }
+  
+  #main:hover {
+    opacity: 0.85;
+    cursor: pointer;
+    background: none;
+  }
+  
+  a {
+    border-radius: 3px;
+  }
+  
+  a:hover {
+    background-color: #ff7f5f71;
+  }
+  
+  .navv {
+    text-align: center;
+  }
+  
+  button.navv {
+    margin: 0 10px;
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .register-link .link {
+    color: #d56b50;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .register-link .link:hover {
+    color: #e33b11;
+  }
+
+
+.modal.show .modal-dialog .modal-content {
+    border-radius: 0;  
+    background-color: rgb(29, 29, 29);
+  }
+
+  .modal.show .modal-dialog .modal-body{
+  background: url("../../assets/bg-2.jpg");
+  color: white;
+  font-weight: bold;
+  } 
+  
+  .modal.show .modal-dialog .modal-header{
+    background: url("../../assets/bg-2.jpg");
+    }
+    .modal.show .modal-dialog .modal-footer{
+        background: url("../../assets/bg-2.jpg");
+        
+        }
+
+        .modal-header .btn-close {
+            background-color: #ff7f50;; /* Make background transparent */
+            border: none; /* Remove any border */
+            position: relative; /* Position relative to parent */
+          }
+          
+          .modal-header .btn-close:hover {
+            opacity: 0.3; /* Slightly reduce opacity on hover */
+          }
+
+ 
+  

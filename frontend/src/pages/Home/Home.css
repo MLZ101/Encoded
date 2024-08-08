@@ -1,0 +1,23 @@
+.section1 {
+    background: rgba(107, 107, 107, 0.5) url("../../assets/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: color-burn;
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover;
+    min-height: 80vh;
+    height: 100vh;
+    text-align: center;
+    font-size: 6vw;
+    color: rgba(252, 252, 252);
+    border-bottom: solid 1px white;
+}
+
+.section2 {
+    background: rgb(29, 29, 29);
+    min-height: 100vh;
+    background-blend-mode:darken;
+}
+
+

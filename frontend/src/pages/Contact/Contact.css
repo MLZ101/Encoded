@@ -1,0 +1,88 @@
+.main-container {
+    min-height: 90vh;
+    background: url("../../assets/bg-form.jpg");
+    -webkit-background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+  
+  .contact-form {
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    background: rgb(29, 29, 29);
+    padding: 20px;
+    margin: 0;
+    border-radius: 5px;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .input-container label {
+    margin-bottom: 5px;
+    font-weight: lighter;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+    resize: vertical; 
+    background-color: rgba(255, 255, 255, 0.892);
+  }
+  
+  .btn {
+    background-color: #d56b50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px; 
+  }
+  
+  .btn:hover {
+    background-color: #c45336;
+    color: black;
+  }
+  
+  .success-message {
+    text-align: center;
+    color: white;
+    background: rgb(29, 29, 29);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .success-message button {
+    background-color: #d56b50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .success-message button:hover {
+    background-color: #c45336;
+    color: black;
+  }
+  
