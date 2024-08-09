@@ -1,1 +1,57 @@
--- temp --
+below is the script used for the database creation. I made it as simple as possible due to extreme time constaint:
+
+-- 1. User Authentication and Profile Management
+
+-- Table to store user details
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    role VARCHAR(20) DEFAULT 'student' -- 'student' or 'admin'
+);
+
+-- 2. Course Management
+
+-- Table to store course details
+CREATE TABLE courses (
+    course_id SERIAL PRIMARY KEY,
+    course_name VARCHAR(255) NOT NULL,
+    description TEXT,
+    instructor_id INT REFERENCES users(user_id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table to store enrollments
+CREATE TABLE enrollments (
+    enrollment_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(user_id),
+    course_id INT REFERENCES courses(course_id),
+    enrolled_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id, course_id)
+);
+
+-- Table to track user progress in courses
+CREATE TABLE course_progress (
+    progress_id SERIAL PRIMARY KEY,
+    enrollment_id INT REFERENCES enrollments(enrollment_id),
+    completed_modules INT DEFAULT 0,
+    total_modules INT DEFAULT 0,
+    grade DECIMAL(5, 2) CHECK (grade >= 0 AND grade <= 100)
+);
+
+-- 3. Admin Dashboard
+
+-- Simple table to manage role-based access control (RBAC)
+CREATE TABLE roles (
+    role_id SERIAL PRIMARY KEY,
+    role_name VARCHAR(50) UNIQUE NOT NULL
+);
+
+-- Mapping table for users and their roles
+CREATE TABLE user_roles (
+    user_role_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(user_id),
+    role_id INT REFERENCES roles(role_id)
+);
