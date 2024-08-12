@@ -2,10 +2,6 @@
     background: rgba(107, 107, 107, 0.5) url("../../assets/bg.jpg") no-repeat center center fixed;
     background-size: cover;
     background-blend-mode: color-burn;
-    /* -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover; */
-    background-size: cover;
     min-height: 80vh;
     height: 100vh;
     text-align: center;
@@ -14,10 +10,53 @@
     border-bottom: solid 1px white;
 }
 
+
 .section2 {
     background: rgb(29, 29, 29);
     min-height: 100vh;
-    background-blend-mode:darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
+.overlay-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
 
+.bg-image {
+    height: 80vh;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    
+    transition: all 0.3s ease-in-out;
+}
+
+.discover-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    font-size: xx-large;
+}
+
+.overlay-container:hover .bg-image {
+    cursor: pointer;
+    filter: blur(5px);
+}
+
+.overlay-container:hover .discover-button {
+    cursor: pointer;
+    background-color:#d56b50;
+    color: black;
+}

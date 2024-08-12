@@ -11,12 +11,12 @@
   display: flex;
   flex-direction: column;
   margin: 20px;
+  height: 50%;
 }
 
 .card-container:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
   background-color:#d56b50;
   color: #212121;
 }
