@@ -1,6 +1,12 @@
 .courses-main {
+    display: flex;
+  justify-content: center;
     background: rgb(29, 29, 29) ;
     min-height: 80vh;
-    
     margin: 0;
+    padding: 2rem;
+
 }
+
+
+

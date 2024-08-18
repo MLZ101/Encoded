@@ -1,10 +1,12 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -13,6 +15,8 @@ const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  
+
   const login = async (email, password) => {
     try {
       const response = await axios.post("http://localhost:5119/api/Auth/login", {
@@ -20,8 +24,12 @@ const AuthProvider = ({ children }) => {
         passwordHash: password,
       });
       const token = response.data.token;
+      const userID = response.data.userId;
+      const userName = response.data.userName;
+      const userEmail = response.data.email;
+      const userRole = response.data.role;
       localStorage.setItem("token", token);
-      setUser({ token });
+      setUser({ token, userID, userName, userEmail, userRole });
       return response.data.message;
     } catch (err) {
       throw new Error("Login failed");
@@ -42,6 +50,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
+    navigate('/');
     localStorage.removeItem("token");
     setUser(null);
     window.location.reload();

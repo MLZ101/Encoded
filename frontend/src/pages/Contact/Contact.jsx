@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import { Col, Row } from "react-bootstrap";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,9 +21,16 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    emailjs.sendForm('service_7qs2dse', 'template_5u0p88q', event.target, 'i3TeSKybpWjXgkfCQ')
+      .then((result) => {
+          window.location.reload()  
+      }, (error) => {
+          console.log(error.text);
+      });
     console.log("Form data submitted:", formData);
     setIsSubmitted(true);
   };
+
 
   return (
     <div className="main-container">
@@ -53,7 +60,7 @@ const Contact = () => {
           </div>
 
           <div className="input-container">
-            <label htmlFor="name">Phone Number</label>
+            <label htmlFor="phone">Phone Number</label>
             <input
               type="text"
               id="phone"
@@ -77,7 +84,7 @@ const Contact = () => {
             />
           </div>
 
-          {/* Container for Message input */}
+          
           <div className="input-container">
             <label htmlFor="message">Message</label>
             <textarea
