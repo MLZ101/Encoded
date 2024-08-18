@@ -74,9 +74,6 @@ public partial class AppDbContext : DbContext
                 .HasDefaultValue(0)
                 .HasColumnName("total_modules");
 
-            entity.HasOne(d => d.Enrollment).WithMany(p => p.CourseProgresses)
-                .HasForeignKey(d => d.EnrollmentId)
-                .HasConstraintName("course_progress_enrollment_id_fkey");
         });
 
         modelBuilder.Entity<Enrollment>(entity =>
