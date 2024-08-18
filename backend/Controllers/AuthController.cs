@@ -60,7 +60,7 @@ namespace backend.Controllers
                 }
                 var token = GenerateJwtToken(existingUser);
 
-                return Ok(new { Token = token, message = "Login Successful!" });
+                return Ok(new { Token = token, message = "Login Successful!", userId = existingUser.UserId, userName = existingUser.UserName, email = existingUser.Email, role = existingUser.Role });
 
             }
 

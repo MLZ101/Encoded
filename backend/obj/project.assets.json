@@ -2613,11 +2613,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\dotnet\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\user\\source\\repos\\dotnet\\backend\\backend.csproj",
+      "projectPath": "C:\\Users\\user\\source\\repos\\backend\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\dotnet\\backend\\obj\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
