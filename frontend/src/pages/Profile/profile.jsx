@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "./profile.css";
@@ -107,3 +108,4 @@ const Profile = () => {
 };
 
 export default Profile;
+
